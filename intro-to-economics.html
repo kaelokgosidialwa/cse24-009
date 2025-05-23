@@ -10,6 +10,126 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="teach-me-style.css" />
+  <style>
+    .top-container, .middle-container, .courses-label-container, .multi-course-carousel-wrapper, .site-footer {
+      box-sizing: border-box;
+    }
+
+    .top-container {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+      padding: 10px;
+    }
+
+    @media (min-width: 600px) {
+      .top-container {
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .top-container {
+        width: 70%;
+      }
+      .top-container .right-buttons {
+        display: flex !important;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .top-container .right-buttons {
+        display: none !important;
+      }
+    }
+
+    .main-section, .info-section {
+      width: 100%;
+      padding: 15px;
+      margin: 20px auto;
+      background-color: white;
+      color: black;
+      border: 1px solid white;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 600px) {
+      .main-section, .info-section {
+        width: 85%;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .main-section, .info-section {
+        width: 70%;
+      }
+    }
+
+    .main-section h1 {
+      font-size: 36px;
+      background-color: #62a24a;
+      padding: 10px;
+      color: white;
+    }
+
+    .main-section .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .main-section .content {
+        flex-direction: row;
+        align-items: flex-start;
+        height: auto;
+      }
+    }
+
+    .main-section img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .info-section img {
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 768px) {
+      .info-section img {
+        float: left;
+        width: 300px;
+        height: auto;
+        margin: -20px 20px 20px -20px;
+      }
+    }
+
+    .site-footer {
+      width: 100%;
+      margin: 40px 0;
+      border-top: 2.5px solid black;
+      background-color: #62a24a;
+      padding-top: 10px;
+      text-align: center;
+      font-size: 20px;
+      color: white;
+    }
+
+    @media (min-width: 1025px) {
+      .site-footer {
+        width: 70%;
+        margin: 100px auto;
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="top-container d-flex align-items-center justify-content-start">
@@ -45,25 +165,25 @@
   </div>
 
   <main>
-    <div style="margin: 40px 0 0 calc((100vw - 70vw) / 2); width: 70%; color: black; background-color: white; border: 1px solid white; box-sizing: border-box;">
-      <h1 style="font-size: 50px; background-color: #62a24a; margin: 0; padding: 0; width: 100%;">Intro to Economics</h1>
-      <div style="display: flex; align-items: flex-start; gap: 5%; margin-top: 0px; height: 400px;">
-        <div style="width: 40%; height: 100%; display: flex; justify-content: center; align-items: center;">
-          <img src="images/intro-to-economics-carousel.png" alt="Intro to Economics" style="max-width: 100%; max-height: 100%;" />
+    <div class="main-section">
+      <h1>Intro To Economics</h1>
+       <div class="content">
+        <div style="flex: 1;">
+          <img src="images/intro-to-economics-carousel.png" alt="Teach Me! Intro To Economics Logo" />
         </div>
-        <div style="width: 55%; height: 100%; border: 1px solid black; padding: 10px;">
+        <div style="flex: 2; padding: 10px;">
           <p>Explore the principles of microeconomics and macroeconomics, including supply and demand, market structures, fiscal and monetary policy, and global trade.</p>
         </div>
       </div>
     </div>
 
-    <div style="margin: 40px 0 0 calc((100vw - 70vw) / 2); width: 70%; border: 1px solid white; color: black; padding: 20px; background-color: white;">
-      <img src="images/intro-to-economics-2.jpg" style="float: left; margin: -20px 20px 20px -20px;" width="550" height="550" alt="">
+    <div class="info-section">
+      <img src="images/intro-to-economics-2.png" alt="Intro To Economics Diagram" />
       <p><strong>Key Topics Covered</strong></p>
   <p>
     This course introduces the fundamental principles of microeconomics and macroeconomics. Students will learn how economies function at both individual and societal levels, focusing on supply and demand, market structures, economic indicators, and the role of government policy.
   </p>
-  <div style="clear: both;"></div>
+
   <ul>
     <li><strong>Basic Economic Concepts</strong>
       <ul>
@@ -102,7 +222,7 @@
     <li>Apply economic reasoning to real-world problems</li>
   </ul>
 </div>
-<script type="module" src="main.js"></script>
+
   </main>
 
   <footer class="site-footer text-center py-3" style="background-color: #62a24a;">
@@ -110,5 +230,7 @@
   </footer>
 
   <script src="accessibility.js"></script>
+  <script type="module" src="main.js"></script>
+  
 </body>
 </html>

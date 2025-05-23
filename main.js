@@ -1,7 +1,7 @@
 import { createCourseCarousel } from './carousel-component.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('courses.json')
+  fetch('/courses.json')
     .then(response => {
       if (!response.ok) throw new Error('Network response was not OK');
       return response.json();
