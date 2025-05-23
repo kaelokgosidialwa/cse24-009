@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Computer Science",
+    "image": "images/discrete-mathematics-carousel.png",
+    "title": "Discrete Mathematics",
+    "link": "discrete-mathematics.html",
+    "keywords": ["logic", "proofs", "sets", "combinatorics", "graphs"]
+  },
+  {
+    "category": "Computer Science",
+    "image": "images/data-structures-carousel.png",
+    "title": "Data Structures",
+    "link": "data-structures.html",
+    "keywords": ["arrays", "linked lists", "trees", "graphs", "algorithms"]
+  },
+  {
+    "category": "Finances",
+    "image": "images/intro-to-economics-carousel.png",
+    "title": "Intro to Economics",
+    "link": "intro-to-economics.html",
+    "keywords": ["microeconomics", "macroeconomics", "supply", "demand"]
+  },
+  {
+    "category": "Finances",
+    "image": "images/financial-literacy-carousel.png",
+    "title": "Financial Literacy",
+    "link": "financial-literacy.html",
+    "keywords": ["budgeting", "saving", "credit", "debt"]
+  },
+  {
+    "category": "Languages",
+    "image": "images/spanish-first-language-carousel.png",
+    "title": "Spanish First Language",
+    "link": "spanish-first-language.html",
+    "keywords": ["spanish", "language", "grammar", "speaking"]
+  },
+  {
+    "category": "Languages",
+    "image": "images/french-first-language-carousel.png",
+    "title": "French First Language",
+    "link": "french-first-language.html",
+    "keywords": ["french", "language", "grammar", "speaking"]
+  },
+  {
+    "category": "History",
+    "image": "images/ancient-civilizations-carousel.png",
+    "title": "Ancient Civilizations",
+    "link": "ancient-civilizations.html",
+    "keywords": ["egypt", "rome", "greece", "mesopotamia"]
+  },
+  {
+    "category": "History",
+    "image": "images/world-war-ii-carousel.png",
+    "title": "World War II",
+    "link": "world-war-ii.html",
+    "keywords": ["ww2", "hitler", "nazi", "axis", "allies"]
+  },
+  {
+    "category": "Programming",
+    "image": "images/intro-to-python-carousel.png",
+    "title": "Intro to Python",
+    "link": "intro-to-python.html",
+    "keywords": ["python", "programming", "coding", "beginner"]
+  },
+  {
+    "category": "Programming",
+    "image": "images/javascript-basics-carousel.png",
+    "title": "JavaScript Basics",
+    "link": "javascript-basics.html",
+    "keywords": ["javascript", "web", "frontend", "programming"]
+  }
+]
