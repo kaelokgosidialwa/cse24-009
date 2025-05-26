@@ -127,16 +127,34 @@
     </div>
   
     <!-- Search Bar -->
-<div class="search-container position-relative">
+<div class="search-container position-relative d-none d-sm-block">
   <input type="search" id="search-input" class="form-control" placeholder="Search..." aria-label="Search" autocomplete="off" />
   <ul id="search-results" class="dropdown-menu show w-100" style="position: absolute; top: 100%; z-index: 1000;"></ul>
+</div>
+
+<!-- Search Button (Visible on xs only) -->
+<button class="btn btn-outline-secondary d-block d-sm-none" data-bs-toggle="modal" data-bs-target="#mobileSearchModal">
+  <i class="bi bi-search"></i> Search
+</button>
+
+<!-- Search Modal for Small Screens -->
+<div class="modal fade" id="mobileSearchModal" tabindex="-1" aria-labelledby="mobileSearchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mobileSearchModalLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="search" class="form-control mb-2" placeholder="Search..." id="mobileSearchInput" />
+        <ul id="mobile-search-results" class="list-group"></ul>
+      </div>
     </div>
-  
-    <!-- Right Buttons Container -->
-    <div class="right-buttons ms-auto d-flex align-items-center gap-2">
-       
-  
-      <!-- Accessibility Dropdown -->
+  </div>
+</div>
+
+<div class="right-buttons d-flex flex-column flex-sm-row align-items-end align-items-sm-center gap-2 ms-auto justify-content-end flex-wrap">
+      
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle accessibility-btn" type="button" data-bs-toggle="dropdown">
           Accessibility

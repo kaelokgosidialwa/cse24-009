@@ -38,8 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
+      // ✅ Setup desktop search if it exists
       if (document.getElementById('search-input') && document.getElementById('search-results')) {
-        setupSearch(allCourses);
+        setupSearchInput('search-input', 'search-results', allCourses);
+      }
+
+      // ✅ Setup mobile search if it exists
+      if (document.getElementById('mobileSearchInput') && document.getElementById('mobile-search-results')) {
+        setupSearchInput('mobileSearchInput', 'mobile-search-results', allCourses);
       }
     })
     .catch(err => {
@@ -47,9 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function setupSearch(allCourses) {
-  const searchInput = document.getElementById('search-input');
-  const resultsContainer = document.getElementById('search-results');
+// ✅ Shared search setup function
+function setupSearchInput(inputId, resultsId, allCourses) {
+  const searchInput = document.getElementById(inputId);
+  const resultsContainer = document.getElementById(resultsId);
 
   searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim().toLowerCase();
@@ -83,8 +90,7 @@ function setupSearch(allCourses) {
   });
 
   document.addEventListener('click', e => {
-    const searchContainer = document.querySelector('.search-container');
-    if (!searchContainer.contains(e.target)) {
+    if (!searchInput.closest('form, .modal, .search-container')?.contains(e.target)) {
       resultsContainer.style.display = 'none';
     }
   });
