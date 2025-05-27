@@ -39,12 +39,6 @@
       }
     }
 
-    @media (max-width: 1024px) {
-      .top-container .right-buttons {
-        display: none !important;
-      }
-    }
-
     .main-section, .info-section {
       width: 100%;
       padding: 15px;
@@ -145,13 +139,14 @@
         <li><a class="dropdown-item" href="teach-me-programming.html">Programming</a></li>
       </ul>
     </div>
-    <div class="search-container position-relative d-none d-sm-block">
+
+   <div class="search-container position-relative d-none d-lg-block">
   <input type="search" id="search-input" class="form-control" placeholder="Search..." aria-label="Search" autocomplete="off" />
   <ul id="search-results" class="dropdown-menu show w-100" style="position: absolute; top: 100%; z-index: 1000;"></ul>
 </div>
 
 <!-- Search Button (Visible on xs only) -->
-<button class="btn btn-outline-secondary d-block d-sm-none" data-bs-toggle="modal" data-bs-target="#mobileSearchModal">
+<button class="btn btn-outline-secondary d-block d-lg-none" data-bs-toggle="modal" data-bs-target="#mobileSearchModal">
   <i class="bi bi-search"></i> Search
 </button>
 
@@ -171,7 +166,7 @@
   </div>
 </div>
 
-<div class="right-buttons d-flex flex-column flex-sm-row align-items-end align-items-sm-center gap-2 ms-auto justify-content-end flex-wrap">
+<div class="right-buttons d-flex flex-column flex-lg-row align-items-end align-items-lg-center gap-2 ms-auto justify-content-end flex-wrap">
       
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle accessibility-btn" type="button" data-bs-toggle="dropdown">
